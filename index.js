@@ -20,94 +20,94 @@ btnNav.addEventListener("click", function (e) {
   header.classList.toggle("nav-open");
 });
 
-// window.addEventListener("click", function () {
-//   header.classList.remove("nav-open");
-// });
+window.addEventListener("click", function () {
+  header.classList.remove("nav-open");
+});
 
-// navLinks.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   const parentEL = e.target.closest("li");
-//   parentEL.closest("header").classList.remove("nav-open");
+navLinks.addEventListener("click", function (e) {
+  e.preventDefault();
+  const parentEL = e.target.closest("li");
+  parentEL.closest("header").classList.remove("nav-open");
 
-//   const activeLinks = document.querySelectorAll(".active__link");
-//   activeLinks.forEach(function (link) {
-//     link.classList.remove("active__link");
-//   });
+  const activeLinks = document.querySelectorAll(".active__link");
+  activeLinks.forEach(function (link) {
+    link.classList.remove("active__link");
+  });
 
-//   parentEL.classList.add("active__link");
+  parentEL.classList.add("active__link");
 
-//   const backgroundImages = {
-//     home: {
-//       mobile: "assets/home/background-home-mobile.jpg",
-//       tablet: "assets/home/background-home-tablet.jpg",
-//       desktop: "assets/home/background-home-desktop.jpg",
-//     },
-//     destination: {
-//       mobile: "assets/destination/background-destination-mobile.jpg",
-//       tablet: "assets/destination/background-destination-tablet.jpg",
-//       desktop: "assets/destination/background-destination-desktop.jpg",
-//     },
-//     crew: {
-//       mobile: "assets/crew/background-crew-mobile.jpg",
-//       tablet: "assets/crew/background-crew-tablet.jpg",
-//       desktop: "assets/crew/background-crew-desktop.jpg",
-//     },
-//     technology: {
-//       mobile: "assets/technology/background-technology-mobile.jpg",
-//       tablet: "assets/technology/background-technology-tablet.jpg",
-//       desktop: "assets/technology/background-technology-desktop.jpg",
-//     },
-//   };
+  const backgroundImages = {
+    home: {
+      mobile: "assets/home/background-home-mobile.jpg",
+      tablet: "assets/home/background-home-tablet.jpg",
+      desktop: "assets/home/background-home-desktop.jpg",
+    },
+    destination: {
+      mobile: "assets/destination/background-destination-mobile.jpg",
+      tablet: "assets/destination/background-destination-tablet.jpg",
+      desktop: "assets/destination/background-destination-desktop.jpg",
+    },
+     crew: {
+      mobile: "assets/crew/background-crew-mobile.jpg",
+      tablet: "assets/crew/background-crew-tablet.jpg",
+      desktop: "assets/crew/background-crew-desktop.jpg",
+    },
+    technology: {
+      mobile: "assets/technology/background-technology-mobile.jpg",
+      tablet: "assets/technology/background-technology-tablet.jpg",
+      desktop: "assets/technology/background-technology-desktop.jpg",
+    },
+  };
 
-//   const screenWidth = window.innerWidth;
-//   let backgroundImageURL;
+  const screenWidth = window.innerWidth;
+  let backgroundImageURL;
 
-//   if (parentEL && parentEL.id === "home") {
-//     homeSection.style.display = "grid";
-//     destinationSection.style.display = "none";
-//     crewSection.style.display = "none";
-//     technologySection.style.display = "none";
+  if (parentEL && parentEL.id === "home") {
+    homeSection.style.display = "grid";
+    destinationSection.style.display = "none";
+    crewSection.style.display = "none";
+    technologySection.style.display = "none";
 
-//     if (screenWidth <= 900) {
-//       backgroundImageURL = backgroundImages.home.tablet;
-//     } else if (screenWidth <= 600) {
-//     } else {
-//       backgroundImageURL = backgroundImages.home.desktop;
-//     }
-//   } else if (parentEL && parentEL.id === "destination") {
-//     homeSection.style.display = "none";
-//     destinationSection.style.display = "grid";
-//     crewSection.style.display = "none";
-//     technologySection.style.display = "none";
+    if (screenWidth <= 900) {
+      backgroundImageURL = backgroundImages.home.tablet;
+    } else if (screenWidth <= 600) {
+    } else {
+      backgroundImageURL = backgroundImages.home.desktop;
+    }
+  } else if (parentEL && parentEL.id === "destination") {
+    homeSection.style.display = "none";
+    destinationSection.style.display = "grid";
+    crewSection.style.display = "none";
+    technologySection.style.display = "none";
 
-//     if (screenWidth <= 900) {
-//       backgroundImageURL = backgroundImages.destination.tablet;
-//     } else {
-//       backgroundImageURL = backgroundImages.destination.desktop;
-//     }
-//   } else if (parentEL && parentEL.id === "crew") {
-//     homeSection.style.display = "none";
-//     destinationSection.style.display = "none";
-//     crewSection.style.display = "grid";
-//     technologySection.style.display = "none";
+    if (screenWidth <= 900) {
+      backgroundImageURL = backgroundImages.destination.tablet;
+    } else {
+      backgroundImageURL = backgroundImages.destination.desktop;
+    }
+  } else if (parentEL && parentEL.id === "crew") {
+    homeSection.style.display = "none";
+    destinationSection.style.display = "none";
+    crewSection.style.display = "grid";
+    technologySection.style.display = "none";
 
-//     if (screenWidth <= 900) {
-//       backgroundImageURL = backgroundImages.crew.tablet;
-//     } else {
-//       backgroundImageURL = backgroundImages.crew.desktop;
-//     }
-//   } else if (parentEL && parentEL.id === "technology") {
-//     homeSection.style.display = "none";
-//     destinationSection.style.display = "none";
-//     crewSection.style.display = "none";
-//     technologySection.style.display = "grid";
+    if (screenWidth <= 900) {
+      backgroundImageURL = backgroundImages.crew.tablet;
+    } else {
+      backgroundImageURL = backgroundImages.crew.desktop;
+    }
+  } else if (parentEL && parentEL.id === "technology") {
+    homeSection.style.display = "none";
+    destinationSection.style.display = "none";
+    crewSection.style.display = "none";
+    technologySection.style.display = "grid";
 
-//     if (screenWidth <= 900) {
-//       backgroundImageURL = backgroundImages.technology.tablet;
-//     } else {
-//       backgroundImageURL = backgroundImages.technology.desktop;
-//     }
-//   }
+    if (screenWidth <= 900) {
+      backgroundImageURL = backgroundImages.technology.tablet;
+    } else {
+      backgroundImageURL = backgroundImages.technology.desktop;
+    }
+  }
 
 //   container.style.backgroundImage = `url(${backgroundImageURL})`;
 // });
