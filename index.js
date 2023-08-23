@@ -1,4 +1,4 @@
-// "use strict";
+ "use strict";
 
 const container = document.querySelector(".container");
 const header = document.querySelector(".header");
@@ -109,156 +109,156 @@ navLinks.addEventListener("click", function (e) {
     }
   }
 
-//   container.style.backgroundImage = `url(${backgroundImageURL})`;
-// });
+  container.style.backgroundImage = `url(${backgroundImageURL})`;
+});
 
-// exploreBtn.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   homeSection.style.display = "none";
-//   destinationSection.style.display = "grid";
-//   destinationID.classList.add("active__link");
-//   homeID.classList.remove("active__link");
-//   container.style.backgroundImage =
-//     "url(assets/destination/background-destination-desktop.jpg)";
-// });
+exploreBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  homeSection.style.display = "none";
+  destinationSection.style.display = "grid";
+  destinationID.classList.add("active__link");
+  homeID.classList.remove("active__link");
+  container.style.backgroundImage =
+    "url(assets/destination/background-destination-desktop.jpg)";
+});
 
-// const renderDestination = function (data, activeDes) {
-//   const html = `
-//           <div class="destination__box">
-//               <div class="tertiary__box">
-//                 <span>01</span>
-//                 <h3 class="tertiary__heading">Pick your destination</h3>
-//               </div>
-//             <div class="destination__img-box">
-//               <img
-//                 src="${data.images.png}"
-//                 alt="space image"
-//                 class="destination__img"
-//               />
-//             </div>
-//           </div>
-//           <div class="destination__text-box">
-//             <div class="destinations__box">
-//               <ul class="destinations">
-//                 <li class="destination moon ${
-//                   activeDes === 1 ? "active__destination" : ""
-//                 }">Moon
-//                 </li>
-//                 <li class="destination mars  ${
-//                   activeDes === 2 ? "active__destination" : ""
-//                 }">Mars</li>
-//                 <li class="destination europa  ${
-//                   activeDes === 3 ? "active__destination" : ""
-//                 }">Europa</li>
-//                 <li class="destination titan  ${
-//                   activeDes === 4 ? "active__destination" : ""
-//                 }">Titan</li>
-//               </ul>
-//             </div>
-//             <h2 class="destination__heading">${data.name}</h2>
-//             <p class="destination__text">${data.description}</p>
-//             <div class="destination__distance">
-//               <div class="distance__box">
-//                 <p class="distance__text">Avg. distance</p>
-//                 <p class="distance">${data.distance}</p>
-//               </div>
-//               <div class="travel__box">
-//                 <p class="travel__text">Est. travel time</p>
-//                 <p class="travel__duration">${data.travel}</p>
-//               </div>
-//             </div>
-//             <!-- </div> -->
-//           </div>
-// `;
+const renderDestination = function (data, activeDes) {
+    const html = `
+            <div class="destination__box">
+                <div class="tertiary__box">
+                  <span>01</span>
+                  <h3 class="tertiary__heading">Pick your destination</h3>
+                </div>
+              <div class="destination__img-box">
+                <img
+                  src="${data.images.png}"
+                  alt="space image"
+                  class="destination__img"
+                />
+              </div>
+            </div>
+            <div class="destination__text-box">
+              <div class="destinations__box">
+                <ul class="destinations">
+                  <li class="destination moon ${
+                    activeDes === 1 ? "active__destination" : ""
+                  }">Moon
+                  </li>
+                  <li class="destination mars  ${
+                    activeDes === 2 ? "active__destination" : ""
+                  }">Mars</li>
+                  <li class="destination europa  ${
+                    activeDes === 3 ? "active__destination" : ""
+                  }">Europa</li>
+                  <li class="destination titan  ${
+                    activeDes === 4 ? "active__destination" : ""
+                  }">Titan</li>
+                </ul>
+              </div>
+              <h2 class="destination__heading">${data.name}</h2>
+              <p class="destination__text">${data.description}</p>
+              <div class="destination__distance">
+                <div class="distance__box">
+                  <p class="distance__text">Avg. distance</p>
+                  <p class="distance">${data.distance}</p>
+                </div>
+                <div class="travel__box">
+                  <p class="travel__text">Est. travel time</p>
+                  <p class="travel__duration">${data.travel}</p>
+                </div>
+            </div>
+            <!-- </div> -->
+          </div>
+`;
 
-//   destinationSection.textContent = "";
-//   destinationSection.insertAdjacentHTML("beforeend", html);
-// };
-// const renderCrew = function (data, activeDotIndex) {
-//   const html = `
-//     <div class="crew__box">
-//       <div class="tertiary__box">
-//         <span>02</span>
-//         <h3 class="tertiary__heading">Meet your crew</h3>
-//       </div>
-//       <div class="crew__text-box">
-//         <h3 class="crew__role">${data.role}</h3>
-//         <h2 class="crew__name">${data.name}</h2>
-//         <p class="crew__bio">${data.bio}</p>
-//       </div>
-//       <div class="dots">
-//         <div class="dot dot-1 data-dot-index${
-//           activeDotIndex === 1 ? " active__dot" : ""
-//         }"></div>
-//         <div class="dot dot-2 data-dot-index${
-//           activeDotIndex === 2 ? " active__dot" : ""
-//         }"></div>
-//         <div class="dot dot-3 data-dot-index${
-//           activeDotIndex === 3 ? " active__dot" : ""
-//         }"></div>
-//         <div class="dot dot-4 data-dot-index${
-//           activeDotIndex === 4 ? " active__dot" : ""
-//         }"></div>
-//       </div>
-//     </div>
-//     <div class="crew__img-box">
-//       <img src="${data.images.png}" alt="" class="crew__img" />
-//     </div>
-//   `;
+  destinationSection.textContent = "";
+  destinationSection.insertAdjacentHTML("beforeend", html);
+};
+const renderCrew = function (data, activeDotIndex) {
+  const html = `
+    <div class="crew__box">
+      <div class="tertiary__box">
+        <span>02</span>
+        <h3 class="tertiary__heading">Meet your crew</h3>
+      </div>
+      <div class="crew__text-box">
+        <h3 class="crew__role">${data.role}</h3>
+        <h2 class="crew__name">${data.name}</h2>
+        <p class="crew__bio">${data.bio}</p>
+      </div>
+      <div class="dots">
+        <div class="dot dot-1 data-dot-index${
+          activeDotIndex === 1 ? " active__dot" : ""
+        }"></div>
+        <div class="dot dot-2 data-dot-index${
+          activeDotIndex === 2 ? " active__dot" : ""
+        }"></div>
+        <div class="dot dot-3 data-dot-index${
+          activeDotIndex === 3 ? " active__dot" : ""
+        }"></div>
+        <div class="dot dot-4 data-dot-index${
+          activeDotIndex === 4 ? " active__dot" : ""
+        }"></div>
+      </div>
+    </div>
+    <div class="crew__img-box">
+      <img src="${data.images.png}" alt="" class="crew__img" />
+    </div>
+  `;
 
-//   crewSection.insertAdjacentHTML("beforeend", html);
-// };
-// const renderTech = function (data, activeNum) {
-//   const html = `
+  crewSection.insertAdjacentHTML("beforeend", html);
+};
+const renderTech = function (data, activeNum) {
+  const html = `
 
   
-//   <div class="tertiary__box">
-//   <span>03</span>
-//   <h3 class="tertiary__heading">Space launch 101</h3>
-//   </div>
+  <div class="tertiary__box">
+  <span>03</span>
+  <h3 class="tertiary__heading">Space launch 101</h3>
+  </div>
   
-//   <div class="box">
-//         <div class="technology__box">
-//           <div class="technology__text-box">
-//             <div class="technology__number-box">
-//               <p class="technology__number tech-1 ${
-//                 activeNum === 1 ? "active__number" : ""
-//               }">1</p>
-//               <p class="technology__number tech-2 ${
-//                 activeNum === 2 ? "active__number" : ""
-//               }">2</p>
-//               <p class="technology__number tech-3 ${
-//                 activeNum === 3 ? "active__number" : ""
-//               }">3</p>
-//             </div>
-//             <div class="technology__description-box">
-//               <h3 class="technology__description">The terminology...</h3>
-//               <h2 class="technology__heading">${data.name}</h2>
-//               <p class="technology__text">${data.description}</p>
-//             </div>
-//           </div>
-//         </div>
-//         <div class="technology__img-box">
-//           <picture>
-//             <source
-//               srcset="${data.images.landscape}"
-//               media="(max-width: 900px)"
-//               alt="launch vehicle landscape"
-//               class="technology__img"
-//             />
-//             <img
-//             src="${data.images.portrait}"
-//             alt="launch vehicle"
-//             class="technology__img"
-//           />
-//       </picture>
+  <div class="box">
+        <div class="technology__box">
+          <div class="technology__text-box">
+            <div class="technology__number-box">
+              <p class="technology__number tech-1 ${
+                activeNum === 1 ? "active__number" : ""
+              }">1</p>
+              <p class="technology__number tech-2 ${
+                activeNum === 2 ? "active__number" : ""
+              }">2</p>
+              <p class="technology__number tech-3 ${
+                activeNum === 3 ? "active__number" : ""
+              }">3</p>
+            </div>
+            <div class="technology__description-box">
+              <h3 class="technology__description">The terminology...</h3>
+              <h2 class="technology__heading">${data.name}</h2>
+              <p class="technology__text">${data.description}</p>
+            </div>
+          </div>
+        </div>
+        <div class="technology__img-box">
+          <picture>
+            <source
+              srcset="${data.images.landscape}"
+              media="(max-width: 900px)"
+              alt="launch vehicle landscape"
+              class="technology__img"
+            />
+            <img
+            src="${data.images.portrait}"
+            alt="launch vehicle"
+            class="technology__img"
+          />
+      </picture>
          
-//       </div>
-//       </div>
-//   `;
+      </div>
+      </div>
+  `;
 
-//   technologySection.insertAdjacentHTML("beforeend", html);
-// };
+  technologySection.insertAdjacentHTML("beforeend", html);
+};
 
 const destination = async function () {
   const res = await fetch("data.json");
